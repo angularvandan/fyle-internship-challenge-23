@@ -1,5 +1,5 @@
 Some correction:
-    1. Topics does not contain any langulge like java,javascript. So i have used language property instead of for display language. 
+    1. Topics does not contain any langulge like java,javascript. So i have used language property instead of topics for display language. 
 
 # Fyle Frontend Challenge
 
