@@ -14,26 +14,20 @@ export class ApiService {
   ) { }
 
   getUser(gitHubUserName: string) {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.YOUR_ACCESS_TOKEN}`
-    });
-    return this.httpClient.get(`https://api.github.com/users/${gitHubUserName}`,{headers});
+    
+    return this.httpClient.get(`https://api.github.com/users/${gitHubUserName}`);
   }
   getAllRepo(gituser:string,currentRepoPage:number,repoPerPage:number) {
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.YOUR_ACCESS_TOKEN}`
-    });
+    
     const params = {
       page: currentRepoPage,
       per_page:repoPerPage
     };
-    return this.httpClient.get(`https://api.github.com/users/${gituser}/repos`,{params,headers });
+    return this.httpClient.get(`https://api.github.com/users/${gituser}/repos`,{params });
   }
   getAllLanguage(fullname:string){
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this.YOUR_ACCESS_TOKEN}`
-    });
-    return this.httpClient.get(`https://api.github.com/repos/${fullname}/languages`,{headers});
+    
+    return this.httpClient.get(`https://api.github.com/repos/${fullname}/languages`);
   }
 
   // implement getRepos method by referring to the documentation. Add proper types for the return type and params 
